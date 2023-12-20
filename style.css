@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url(bg.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 700px;
+	height: 90%;
+	perspective: 1200px;
+	overflow: hidden;
+}
+
+.card {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 450px;
+	height: 650px;
+	transform-style: preserve-3d;
+}
+
+.card .card-bg {
+	position: absolute;
+}
+
+.card .card-bg img {
+	z-index: 1;
+	width: 100%;
+	border-radius: 10px;
+}
+
+.card .title {
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	line-height: 0.9;
+	transition: all 0.3s ease-out;
+}
+
+.card .title h2 {
+	font-family: 'Emilys Candy', serif;
+	font-size: 25px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.card .title h1 {
+	font-family: 'Emilys Candy', serif;
+	font-size: 60px;
+	letter-spacing: 2px;
+}
+
+.card .title h3 {
+	font-family: 'Eczar', serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+.card .title h4 {
+	position: absolute;
+	right: -20px;
+	top: 16px;
+	transform: rotate(11deg);
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+
+.card .images {
+	z-index: 2;
+}
+
+.card .images .santa {
+	position: absolute;
+	left: 50%;
+	margin-left: -206px;
+	top: 100px;
+	width: 420px;
+	transition: all 0.3s ease-out;
+}
+
+@media all and (max-height: 800px) {
+	.card {
+		top: 45px;
+	}
+}

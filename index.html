@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Merry Christmas</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <meta name="keywords" content="Christmas, card">
+  <meta name="description" content="Merry Christmas">
+  <meta property="og:title" content="Christmas Card" />
+  <meta property="og:description" content="Merry Christmas" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="card">
+      <div class="title">
+        <h2>Merry</h2>
+        <h1>Christmas</h1>
+        <h4>Sidney</h4>
+        <h3>& Happy New Year</h3>
+      </div>
+      <div class="images">
+        <img src="santa.png" class="santa" alt="">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script>
+    const container = document.querySelector(".container");
+    const card = document.querySelector(".card");
+    const title = document.querySelector(".title");
+    const santa = document.querySelector(".santa");
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    // 마우스 이벤트 및 터치 이벤트 처리
+    container.addEventListener("mousemove", (event) => {
+      handleMove(event.clientX, event.clientY);
+    });
+
+    container.addEventListener("touchmove", (event) => {
+      const touch = event.touches[0];
+      handleMove(touch.clientX, touch.clientY);
+    });
+
+    function handleMove(x, y) {
+      const { innerWidth, innerHeight } = window;
+      const normalizedX = (x / innerWidth) * 2 - 1;
+      const normalizedY = -(y / innerHeight) * 2 + 1;
+
+      mouseX = normalizedX;
+      mouseY = normalizedY;
+
+      // 회전 및 이동
+      gsap.to(card, { rotationY: mouseX * 30, rotationX: mouseY * 20, duration: 0.5 });
+      gsap.to(title, { z: 160, duration: 0.1 });
+      gsap.to(santa, { z: 220, duration: 0.1 });
+    }
+
+    // 이벤트에서 벗어났을 때 초기 상태로 되돌림
+    container.addEventListener("mouseout", () => {
+      mouseX = 0;
+      mouseY = 0;
+
+      gsap.to(card, { rotationY: 0, rotationX: 0, duration: 0.5 });
+      gsap.to(title, { z: 0, duration: 0.1 });
+      gsap.to(santa, { z: 0, duration: 0.1 });
+    });
+  </script>
+</body>
+
+</html>
