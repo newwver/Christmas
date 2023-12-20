@@ -93,9 +93,9 @@ body {
 .card .images .santa {
 	position: absolute;
 	left: 50%;
-	margin-left: -206px;
+	margin-left: -175px;
 	top: 100px;
-	width: 420px;
+	width: 370px;
 	transition: all 0.3s ease-out;
 }
 
