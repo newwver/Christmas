@@ -12,6 +12,23 @@
   <meta property="og:title" content="Christmas Card" />
   <meta property="og:description" content="Merry Christmas" />
   <link rel="stylesheet" href="style.css">
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="./js/snowfall.jquery.min.js"></script>
+  <script src="./js/snowfall.js"></script>
+  <script type='text/javascript'>
+    $(document).ready(function () {
+      $(document).snowfall({
+        image: "images/flake.png",
+        minSize: 2,
+        maxSize: 9,
+        maxSpeed: 3,
+        flakeCount: 80, // 눈송이 개수
+        flakeColor: '#ffffff',
+        flakeIndex: 999999 // 눈송이 층 개수
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -21,16 +38,15 @@
       <div class="title">
         <h2>Merry</h2>
         <h1>Christmas</h1>
-        <h4>Sidney</h4>
+        <h4>Dear &#9829;</h4>
         <h3>& Happy New Year</h3>
       </div>
       <div class="images">
-        <img src="santa.png" class="santa" alt="">
+        <video class="santa" src="./images/santa_animation.mp4" loop autoplay muted></video>
       </div>
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script>
     const container = document.querySelector(".container");
     const card = document.querySelector(".card");
