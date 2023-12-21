@@ -36,7 +36,7 @@ body {
 	width: 450px;
 	height: 700px;
 	transform-style: preserve-3d;
-	background: #000;
+	background: #fff;
 	border-radius: 15px;
 }
 
@@ -54,7 +54,7 @@ body {
 	z-index: 3;
 	position: absolute;
 	top: 30px;
-	color: #fff;
+	color: #000;
 	text-align: center;
 	line-height: 0.9;
 	transition: all 0.3s ease-out;
