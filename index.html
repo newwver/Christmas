@@ -47,6 +47,13 @@
       </div>
     </div>
   </div>
+  <div class="carol">
+    <audio id="myAudio" controls autoplay style="display: none;">
+      <source src="./audio.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <button id="playPauseButton" class="play" onclick="togglePlayPause()"></button>
+  </div>
 
   <script>
     const container = document.querySelector(".container");
@@ -91,6 +98,31 @@
       gsap.to(santa, { z: 0, duration: 0.1 });
     });
   </script>
+  <!-- 캐롤 -->
+  <script>
+    const audio = document.getElementById('myAudio');
+    const playPauseButton = document.getElementById('playPauseButton');
+
+    audio.onplay = function () {
+      playPauseButton.classList.remove('play');
+      playPauseButton.classList.add('pause');
+    }
+
+    audio.onpause = function () {
+      playPauseButton.classList.remove('pause');
+      playPauseButton.classList.add('play');
+    }
+
+    function togglePlayPause() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+    audio.volume = 0.25;
+  </script>
+
 </body>
 
 </html>

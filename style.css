@@ -134,3 +134,25 @@ body {
 		font-size: 45px;
 	}
 }
+.carol {
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+}
+#audioPlayer {
+	display: none;
+}
+#playPauseButton {
+	width: 22px;
+	height: 22px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.play {
+	background-image: url('./images/play.png');
+}
+.pause {
+	background-image: url('./images/pause.png');
+}
