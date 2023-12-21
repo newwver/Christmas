@@ -22,7 +22,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 700px;
+	width: 1000px;
 	height: 90%;
 	perspective: 1200px;
 	overflow: hidden;
