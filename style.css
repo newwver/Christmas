@@ -116,7 +116,7 @@ body {
 	font-size: 20px;
 	line-height: 1.4;
 	font-family: 'Eczar', serif;
-	margin: -170px 50px 0 50px;
+	margin: -160px 50px 0 50px;
 }
 
 .carol {
@@ -160,7 +160,7 @@ body {
 		width: 75%;
 		height: 86%;
 		min-width: 260px;
-		max-height: 700px;
+		max-height: 630px;
 	}
 	.card .title h1 {
 		font-size: clamp(29px, 8vw, 50px);
@@ -174,7 +174,7 @@ body {
 		min-width: 200px;
 	}
 	.card .message {
-		font-size: 16px;
+		font-size: 17px;
 		margin: -16vh 20px 0 20px;
 	}
 	#playPauseButton {
@@ -184,7 +184,7 @@ body {
 }
 @media all and (max-width: 400px) {
 	.card .title h1 {
-		font-size: 28px;
+		font-size: clamp(24px, 8vw, 31px);
 	}
 	.card .title h2 {
 		font-size: 22px;
